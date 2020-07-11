@@ -1,0 +1,75 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    background: #1a1a1a;
+}
+span{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 2em;
+
+    /* Clip Background Image */
+
+    background: url(image/yellow.jpg) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 4s ease-in-out infinite ;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+
+}
+img{
+    position: fixed;
+    font-size: 2.8em;
+    animation: infinite 4s ease-in-out;
+    animation-name: ColorScaling;
+    margin-bottom: 535px;
+    margin-left: 780px;
+}
+div{
+    background-color: yellow;
+    position: fixed;
+    width: 920px;
+    height: 150px;
+}
+@keyframes ColorScaling {
+    0%{
+        transform: translateX(-600px);
+        opacity: 0;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: transparent;
+    }
+    10%{
+        opacity: 1;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+    90%{
+        opacity: 1;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(600px);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: transparent;
+    }
+}
+@-webkit-keyframes aitf {
+    0% { background-position: -1250px 50%; }
+    100% { background-position: -50px 50%; }
+}
